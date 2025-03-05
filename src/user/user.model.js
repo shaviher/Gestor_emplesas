@@ -31,7 +31,7 @@ const userSchema = Schema({
         maxLength: 8,
         required: true
     },
-    role:{
+    rol:{
         type: String,
         required: true,
         enum: ["ADMIN", "USER"]
@@ -40,10 +40,6 @@ const userSchema = Schema({
         type: Boolean,
         default: true
     }
-},
-{
-    versionKey: false,
-    timeStamps: true
 })
 
 userSchema.methods.toJSON = function(){
