@@ -8,16 +8,17 @@ export const register = async (req, res) => {
     try{
         const data = req.body;
 
-        const encryptedPassword = await argon2.hash(data.contra);
+        const encryptedPassword = await argon2.hash(data.password);
 
-        data.contra = encryptedPassword;
+        data.password = encryptedPassword;
 
-        const user = await Usuario.create(data);
+        const user = await User.create(data);
 
         return res.status(201).json({
+            success: true,
             message: "The user has been registered",
-            nombre: user.nombre,
-            correo: user.correo
+            name: user.name,
+            email: user.email
         });
 
     }catch(err){
