@@ -16,3 +16,12 @@ export const getCategoriesValidator = [
     validarCampos,
     handleErrors
 ]
+
+export const updateCategoryValidator = [
+    body("name").notEmpty().withMessage("Name is required"),
+    body("description").notEmpty().withMessage("Description is required"),
+    validateJWT,
+    validarCampos,
+    handleErrors
+
+]

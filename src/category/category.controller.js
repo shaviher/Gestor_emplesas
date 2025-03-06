@@ -39,3 +39,34 @@ export const getCategories = async (req, res) => {
         })
     }
 }
+
+export  const updateCategory = async (req, res) => {
+    try{
+        const { cid } = req.params
+        const { name, description } = req.body
+
+        const categoryToUpdate = await Category.findByIdAndUpdate(cid, { name, description }, { new: true })
+
+        if(!categoryToUpdate){
+            return res.status(404).json({
+                success: false,
+                message: "Category not found"
+            })
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: "Category updated successfully",
+            name: categoryToUpdate.name,
+            description: categoryToUpdate.description
+        })
+
+
+    }catch(error){
+        return res.status(500).json({
+            success: false,
+            message: "Error updating category",
+            error: error.message
+        })    
+    }
+}
