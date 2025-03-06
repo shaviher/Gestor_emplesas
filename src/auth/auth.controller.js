@@ -18,7 +18,11 @@ export const register = async (req, res) => {
             success: true,
             message: "The user has been registered",
             name: user.name,
-            email: user.email
+            lastname: user.lastname,
+            username: user.username,
+            email: user.email,
+            phone: user.phone,
+            rol: user.rol
         });
 
     }catch(err){

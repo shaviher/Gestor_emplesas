@@ -15,8 +15,8 @@ export const userExists = async (uid = "") => {
 }
 
 export const usernameExists = async (username = "") => {
-    const exist = await User.findOne({username})
-    if(exist){
-        throw new Error("The username ${username} is already registered")
+    const exist = await User.findOne({ username })
+    if (exist) {
+        throw new Error(`The username ${username} is already registered`);
     }
 }

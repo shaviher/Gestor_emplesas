@@ -7,7 +7,7 @@ import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
 import { adminCreate } from "./admin.js"
 import authRoutes from "../src/auth/auth.routes.js"
-// import userRoutes from "../src/user/user.routes.js"
+import userRoutes from "../src/user/user.routes.js"
 
 
 
@@ -20,7 +20,7 @@ const middlewares = (app) => {
 
 const routes = (app) => {
     app.use("/GestorTienda/v1/auth", authRoutes)
-    // app.use("/GestorTienda/v1/user", userRoutes)
+    app.use("/GestorTienda/v1/user", userRoutes)
 }
 
 const conectarDB = async () =>{
