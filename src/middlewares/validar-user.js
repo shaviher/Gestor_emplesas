@@ -9,3 +9,11 @@ export const updateUserValidator = [
     validateJWT,
     handleErrors
 ]
+
+export const deleteUserValidator = [
+    body("username").notEmpty().withMessage("Username is required"),
+    body("email").notEmpty().withMessage("Email is required"),
+    validarCampos,
+    validateJWT,
+    handleErrors
+]
