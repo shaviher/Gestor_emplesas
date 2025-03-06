@@ -10,3 +10,9 @@ export const createCategoryValidator = [
     validarCampos,
     handleErrors
 ]
+
+export const getCategoriesValidator = [
+    validateJWT,
+    validarCampos,
+    handleErrors
+]
