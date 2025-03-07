@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "67ca86ae1b02b557e7b7fe41"
+  },
+  "name": "Laptop Gamer",
+  "price": 1200,
+  "category": {
+    "$oid": "67c9468636bda7bb7a9f826d"
+  },
+  "__v": 0
+}]

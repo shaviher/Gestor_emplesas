@@ -11,3 +11,15 @@ export const createProductValidator = [
     validarCampos,
     handleErrors
 ]
+
+export const updateProductValidator = [
+    validateJWT,
+    validarCampos,
+    handleErrors
+]
+
+export const deleteProductValidator = [
+    validateJWT,
+    validarCampos,
+    handleErrors
+]
