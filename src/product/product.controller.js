@@ -3,13 +3,13 @@ import Category from "../category/category.model.js";
 
 export const createProduct = async (req, res) => {
     try {
-        const { name, price, categoryId } = req.body;
+        const { name, price, categoryId } = req.body
 
         if (!name || !price) {
             return res.status(400).json({
                 success: false,
                 message: "Name and price are required",
-            });
+            })
         }
 
         let category = null;
@@ -20,18 +20,18 @@ export const createProduct = async (req, res) => {
                 return res.status(404).json({
                     success: false,
                     message: "Category not found",
-                });
+                })
             }
         } else {
 
-            category = await Category.findOne({ name: "default" });
+            category = await Category.findOne({ name: "default" })
 
             if (!category) {
                 category = new Category({
                     name: "default",
                     description: "Default category for products without assigned category",
-                });
-                await category.save();
+                })
+                await category.save()
             }
         }
 
@@ -41,18 +41,18 @@ export const createProduct = async (req, res) => {
             category: category._id,
         });
 
-        await newProduct.save();
+        await newProduct.save()
 
         return res.status(201).json({
             success: true,
             message: "Product created successfully",
             product: newProduct,
-        });
+        })
     } catch (error) {
         return res.status(500).json({
             success: false,
             message: "Error creating product",
             error: error.message,
-        });
+        })
     }
-};
+}

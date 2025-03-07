@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "67c9468636bda7bb7a9f826d"
+  },
+  "name": "default",
+  "description": "Categoría predeterminada para productos eliminados",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c94d8cdf8796294a801cba"
+  },
+  "name": "Clean",
+  "description": "Productions the cleans",
+  "__v": 0
+}]
