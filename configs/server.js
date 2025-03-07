@@ -6,9 +6,11 @@ import helmet from "helmet"
 import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
 import { adminCreate } from "./admin.js"
+import { createDefaultCategory } from "./category.js"
 import authRoutes from "../src/auth/auth.routes.js"
 import userRoutes from "../src/user/user.routes.js"
-
+import categoryRoutes from "../src/category/category.routes.js"
+import productRoutes from "../src/product/product.routes.js"
 
 
 const middlewares = (app) => {
@@ -21,6 +23,8 @@ const middlewares = (app) => {
 const routes = (app) => {
     app.use("/GestorTienda/v1/auth", authRoutes)
     app.use("/GestorTienda/v1/user", userRoutes)
+    app.use("/GestorTienda/v1/category", categoryRoutes)
+    app.use("/GestorTienda/v1/product", productRoutes)
 }
 
 const conectarDB = async () =>{
@@ -37,6 +41,7 @@ export const initServer = () => {
         middlewares(app)
         conectarDB()
         adminCreate()
+        createDefaultCategory()
         routes(app)
         const PORT = process.env.PORT || 3001
         app.listen(process.env.PORT)
