@@ -67,41 +67,79 @@ export const createProduct = async (req, res) => {
 
 export const updateProduct = async (req, res) => {
     try {
-        const { pid } = req.params;
-        const { name, description, price, stock, categoryId } = req.body;
+        const { pid } = req.params
+        const { name, description, price, stock, categoryId } = req.body
 
-        let updatedData = { name, description, price, stock };
+        let updatedData = { name, description, price, stock }
 
         if (categoryId) {
-            const category = await Category.findById(categoryId);
+            const category = await Category.findById(categoryId)
             if (!category) {
                 return res.status(404).json({
                     success: false,
                     message: "Category not found",
-                });
+                })
             }
-            updatedData.category = category._id;
+            updatedData.category = category._id
         }
 
-        const updatedProduct = await Product.findByIdAndUpdate(pid, updatedData, { new: true });
+        const updatedProduct = await Product.findByIdAndUpdate(pid, updatedData, { new: true })
 
         if (!updatedProduct) {
             return res.status(404).json({
                 success: false,
                 message: "Product not found",
-            });
+            })
         }
 
         return res.status(200).json({
             success: true,
             message: "Product updated successfully",
             product: updatedProduct,
-        });
+        })
     } catch (error) {
         return res.status(500).json({
             success: false,
             message: "Error updating product",
             error: error.message,
-        });
+        })
     }
-};
+}
+
+
+export const exploreProducts = async (req, res) => {
+    try {
+        const { filter, search, categoryId } = req.query
+        let query = {}
+
+      
+        if (search) {
+            query.name = { $regex: search, $options: "i" }
+        }
+
+        
+        if (categoryId) {
+            query.category = categoryId
+        }
+
+        let products
+
+        
+        if (filter === "bestsellers") {
+            products = await Product.find(query).sort({ sales: -1 }).populate("category", "name")
+        } else {
+            products = await Product.find(query).populate("category", "name")
+        }
+
+        return res.status(200).json({
+            success: true,
+            products,
+        });
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Error fetching products",
+            error: error.message,
+        })
+    }
+}
