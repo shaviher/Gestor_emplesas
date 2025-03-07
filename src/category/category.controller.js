@@ -1,10 +1,11 @@
-import Category from "../category/category.model.js";
+import Category from "../category/category.model.js"
+import Product from "../product/product.model.js"
 
 export const createCategory = async (req, res) => {
     try {
         const { name, description } = req.body
 
-        const newCategory = new Category({name, description})
+        const newCategory = new Category({ name, description })
 
         await newCategory.save()
 
@@ -14,11 +15,11 @@ export const createCategory = async (req, res) => {
             name: newCategory.name,
             description: newCategory.description,
         })
-    } catch (error) {
+    } catch (err) {
         return res.status(500).json({
             success: false,
             message: "Error creating category",
-            error: error.message,
+            error: err.message,
         })
     }
 }
@@ -31,23 +32,23 @@ export const getCategories = async (req, res) => {
             success: true,
             categories
         })
-    } catch (error) {
+    } catch (err) {
         return res.status(500).json({
             success: false,
             message: "Error getting categories",
-            error: error.message
+            error: err.message
         })
     }
 }
 
-export  const updateCategory = async (req, res) => {
-    try{
+export const updateCategory = async (req, res) => {
+    try {
         const { cid } = req.params
         const { name, description } = req.body
 
         const categoryToUpdate = await Category.findByIdAndUpdate(cid, { name, description }, { new: true })
 
-        if(!categoryToUpdate){
+        if (!categoryToUpdate) {
             return res.status(404).json({
                 success: false,
                 message: "Category not found"
@@ -62,11 +63,59 @@ export  const updateCategory = async (req, res) => {
         })
 
 
-    }catch(error){
+    } catch (err) {
         return res.status(500).json({
             success: false,
             message: "Error updating category",
-            error: error.message
-        })    
+            error: err.message
+        })
+    }
+}
+
+export const deleteCategory = async (req, res) => {
+    try {
+        const { cid } = req.params
+
+        const category = await Category.findByIdAndDelete(cid)
+
+        if (!category) {
+            return res.status(404).json({
+                success: false,
+                message: "Category not found"
+            })
+        }
+
+        if(category.name === "default"){
+            return res.status(400).json({
+                success: false,
+                message: "You cannot delete the default category"
+            })
+        }
+
+        let defaultCategory = await Category.findOne({ name: "default" })
+
+        if(!defaultCategory){
+            defaultCategory = new Category({
+                name: "default",
+                description: "default category"
+            })
+            await defaultCategory.save()
+        }
+        
+        await Product.updateMany({ category: category._id }, { $set: { category: defaultCategory._id } })  
+
+        await Category.findByIdAndDelete(cid)
+
+        return res.status(200).json({
+            success: true,
+            message: "Category deleted successfully"
+        })
+
+
+    } catch (err) {
+        return res.status(500).json({
+            message: "Error deleting category",
+            error: err.message
+        })
     }
 }
