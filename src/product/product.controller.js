@@ -56,11 +56,11 @@ export const createProduct = async (req, res) => {
             category: newProduct.category._id
             }
         })
-    } catch (error) {
+    } catch (err) {
         return res.status(500).json({
             success: false,
             message: "Error creating product",
-            error: error.message,
+            error: err.message,
         })
     }
 }
@@ -97,11 +97,11 @@ export const updateProduct = async (req, res) => {
             message: "Product updated successfully",
             product: updatedProduct,
         })
-    } catch (error) {
+    } catch (err) {
         return res.status(500).json({
             success: false,
             message: "Error updating product",
-            error: error.message,
+            error: err.message,
         })
     }
 }
@@ -111,12 +111,10 @@ export const exploreProducts = async (req, res) => {
     try {
         const { filter, search, categoryId } = req.query
         let query = {}
-
       
         if (search) {
             query.name = { $regex: search, $options: "i" }
         }
-
         
         if (categoryId) {
             query.category = categoryId
@@ -126,20 +124,73 @@ export const exploreProducts = async (req, res) => {
 
         
         if (filter === "bestsellers") {
-            products = await Product.find(query).sort({ sales: -1 }).populate("category", "name")
+            products = await Product.find(query).sort({ sales: -1 }).populate("category", "name");
+        } else if (filter === "outofstock") {
+            query.stock = 0;
+            products = await Product.find(query).populate("category", "name");
         } else {
-            products = await Product.find(query).populate("category", "name")
+            products = await Product.find(query).populate("category", "name");
         }
 
         return res.status(200).json({
             success: true,
             products,
         });
-    } catch (error) {
+    } catch (err) {
         return res.status(500).json({
             success: false,
             message: "Error fetching products",
-            error: error.message,
+            error: err.message,
+        })
+    }
+}
+
+export const getProductById = async (req, res) => {
+    try {
+        const { pid } = req.params;
+        const product = await Product.findById(pid).populate("category", "name")
+
+        if (!product) {
+            return res.status(404).json({
+                success: false,
+                message: "Product not found",
+            })
+        }
+
+        return res.status(200).json({
+            success: true,
+            product,
+        })
+    } catch (err) {
+        return res.status(500).json({
+            success: false,
+            message: "Error fetching product",
+            error: err.message,
+        })
+    }
+}
+
+export const deleteProduct = async (req, res) => {
+    try {
+        const { pid } = req.params
+        const deletedProduct = await Product.findByIdAndDelete(pid)
+
+        if (!deletedProduct) {
+            return res.status(404).json({
+                success: false,
+                message: "Product not found",
+            })
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: "Product deleted successfully",
+        })
+    } catch (err) {
+        return res.status(500).json({
+            success: false,
+            message: "Error deleting product",
+            error: err.message,
         })
     }
 }

@@ -17,3 +17,9 @@ export const updateProductValidator = [
     validarCampos,
     handleErrors
 ]
+
+export const deleteProductValidator = [
+    validateJWT,
+    validarCampos,
+    handleErrors
+]
