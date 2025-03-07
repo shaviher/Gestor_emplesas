@@ -1,16 +1,120 @@
 [{
   "_id": {
-    "$oid": "67c9468636bda7bb7a9f826d"
+    "$oid": "67caf6324132a41013f9c65a"
   },
   "name": "default",
-  "description": "Categoría predeterminada para productos eliminados",
+  "description": "default category",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "67c94d8cdf8796294a801cba"
+    "$oid": "67cb0bf3d3556b679f8dbaae"
   },
-  "name": "Clean",
-  "description": "Productions the cleans",
+  "name": "Electrónica",
+  "description": "Dispositivos y accesorios electrónicos, como teléfonos, computadoras y gadgets.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0bfcd3556b679f8dbab1"
+  },
+  "name": "Ropa",
+  "description": "Prendas de vestir para hombres, mujeres y niños, incluyendo ropa casual, formal y deportiva.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0c01d3556b679f8dbab4"
+  },
+  "name": "Muebles",
+  "description": "Muebles para el hogar y oficina, incluyendo sofás, sillas, mesas y estanterías.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0c07d3556b679f8dbab7"
+  },
+  "name": "Juguetes",
+  "description": "Juguetes para niños de todas las edades, desde juegos educativos hasta figuras de acción.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0c0dd3556b679f8dbaba"
+  },
+  "name": "Alimentos",
+  "description": "Productos comestibles, tanto frescos como procesados, para consumo diario.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0c34d3556b679f8dbabd"
+  },
+  "name": "Hogar y Cocina",
+  "description": "Artículos y utensilios para la cocina, el hogar y la limpieza, como electrodomésticos y accesorios.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0c41d3556b679f8dbac0"
+  },
+  "name": "Deportes",
+  "description": "Equipos y accesorios para la práctica de diversos deportes, como fútbol, baloncesto y ciclismo.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0c4ad3556b679f8dbac3"
+  },
+  "name": "Automóviles",
+  "description": "Accesorios y piezas para vehículos, además de productos relacionados con el mantenimiento de autos.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0c55d3556b679f8dbac6"
+  },
+  "name": "Libros",
+  "description": "Libros de diversos géneros, desde novelas hasta textos educativos y técnicos.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0c5dd3556b679f8dbac9"
+  },
+  "name": "Música",
+  "description": "Instrumentos musicales, equipos de sonido y accesorios para músicos.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0c65d3556b679f8dbacc"
+  },
+  "name": "Tecnología",
+  "description": "Productos tecnológicos avanzados, como computadoras, cámaras y dispositivos inteligentes.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0c6dd3556b679f8dbacf"
+  },
+  "name": "Arte y Manualidades",
+  "description": "Suministros y materiales para proyectos de arte y manualidades, desde pintura hasta scrapbooking.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0c75d3556b679f8dbad2"
+  },
+  "name": "Jardinería",
+  "description": "Herramientas y productos para el cuidado y mantenimiento de jardines y plantas.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0c7cd3556b679f8dbad5"
+  },
+  "name": "Accesorios",
+  "description": "Complementos de moda como relojes, joyas, bolsos y gafas.",
   "__v": 0
 }]

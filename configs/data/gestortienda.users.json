@@ -1,12 +1,12 @@
 [{
   "_id": {
-    "$oid": "67c7f5878a19f5f67b199fcf"
+    "$oid": "67caf6324132a41013f9c65c"
   },
   "name": "Braulio",
   "lastname": "Echeverria",
   "username": "jbraulio85",
   "email": "becheverria@gmail.com",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$eah02zmKrCl58ji0kW63Vw$S2IcJ79Kh+pbyjMIpiUWcG5gS62WAT4Bj0mBbIbIqdw",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$JTTzLK9zYFUnNP9U6lfzFg$ILDYgnIa9fx0Z7k32XaQwTWiklU/0zr4g68m49ymLX0",
   "phone": "12345678",
   "rol": "ADMIN",
   "status": true,
@@ -14,99 +14,15 @@
 },
 {
   "_id": {
-    "$oid": "67c7faacdd7b2022029d7e03"
-  },
-  "name": "Juan",
-  "lastname": "Perez",
-  "username": "juan.perez",
-  "email": "juan@example.com",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$JCcDbWdhKeXjZlfHdhovkQ$EAjYgnfamdN3pW+LQqUOEmGYPtslofSSLBXHpcWJAkY",
-  "phone": "11345678",
-  "rol": "CLIENT",
-  "status": true,
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "67c7fabedd7b2022029d7e07"
-  },
-  "name": "Eva",
-  "lastname": "López",
-  "username": "evalopez",
-  "email": "eva.lopez@example.com",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$PWNdln94dFWPimn68JWLmQ$cpVLrsUhVEG8u9J8dlIKOarEOJBrDhAETbxIEqASiwQ",
-  "phone": "55588822",
-  "rol": "CLIENT",
-  "status": true,
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "67c7fad6dd7b2022029d7e0b"
-  },
-  "name": "Carlos",
-  "lastname": "Hernández",
-  "username": "carloshernandez",
-  "email": "carlos@example.com",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$aCfjiPhdphWsMPR5rvOX5g$7dLgsVfoMa7klXBHqTQF8veMp2CDWbBOpYx5x0IIw/4",
-  "phone": "12345678",
-  "rol": "CLIENT",
-  "status": true,
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "67c7fd969103b02f8c4f685b"
+    "$oid": "67cb1cb22a50f6575af1e0d9"
   },
   "name": "Luis",
-  "lastname": "Ramírez",
-  "username": "luisramirez",
-  "email": "luis.ramirez@example.com",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$CRtQYWsw1oCQFbPyJ+flMw$+H4hWCl6c5KsPGA56hBNnAfu70uTK9zExkby6v8gHKA",
-  "phone": "33377711",
+  "lastname": "García",
+  "username": "luisgarcia",
+  "email": "luis.garcia@example.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$S6sK7MRupPH2DW2Qeg4gGw$09FBouQT+EkMTjj/Mq6w4uNcF4TD82t9DARQpVJMuWQ",
+  "phone": "98765432",
   "rol": "CLIENT",
-  "status": true,
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "67c7fdc724d986526933b57f"
-  },
-  "name": "Maximiliano",
-  "lastname": "Rodríguez",
-  "username": "maximiliano123",
-  "email": "maximiliano.rodriguez@example.com",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$hVa4RG+8YKfVtgRAin6kBQ$XLhNXGyRIo8h/1/oUh1TwDz/g1fmnkBk2X1DP9g2RWI",
-  "phone": "11122334",
-  "rol": "CLIENT",
-  "status": true,
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "67c8021b11a622546a5dda40"
-  },
-  "name": "Gabriela Alejandra",
-  "lastname": "Ramírez",
-  "username": "gabriela.alejandra",
-  "email": "gabriela.alejandra@example.com",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$+tcjHQ19OjgIJ0UfxAsOzA$NWA+epLxpm23GZpgMtMx0gJmJ/0ymJLaCyavzXC/P/w",
-  "phone": "34567890",
-  "rol": "CLIENT",
-  "status": true,
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "67c803039b4f844a5c914e1c"
-  },
-  "name": "Javier",
-  "lastname": "Hernández",
-  "username": "javierhernandez",
-  "email": "javier.hernandez@example.com",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$GyXA3gaPzznFuZoMO+qQqw$4YFuEptD2+8mZyUZHLQBwcrZ2xDi9H9Yvg9wBrOwJ0A",
-  "phone": "18762340",
-  "rol": "ADMIN",
   "status": true,
   "__v": 0
 }]

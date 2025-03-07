@@ -1,11 +1,560 @@
 [{
   "_id": {
-    "$oid": "67ca86ae1b02b557e7b7fe41"
+    "$oid": "67cb0ce9d3556b679f8dbada"
   },
-  "name": "Laptop Gamer",
-  "price": 1200,
+  "name": "Smartphone Galaxy S22",
+  "description": "Smartphone de última generación con pantalla AMOLED de 6.1 pulgadas y cámara de 50 MP.",
+  "price": 799.99,
+  "stock": 50,
+  "sales": 0,
   "category": {
-    "$oid": "67c9468636bda7bb7a9f826d"
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0cf3d3556b679f8dbade"
+  },
+  "name": "Laptop HP Envy 13",
+  "description": "Laptop ultradelgada con procesador Intel Core i7 y 16 GB de RAM.",
+  "price": 1099.99,
+  "stock": 30,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0cfad3556b679f8dbae2"
+  },
+  "name": "Auriculares Sony WH-1000XM4",
+  "description": "Auriculares con cancelación de ruido y calidad de sonido premium.",
+  "price": 350,
+  "stock": 75,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d01d3556b679f8dbae6"
+  },
+  "name": "Smartwatch Apple Watch Series 7",
+  "description": "Reloj inteligente con pantalla Retina siempre encendida y seguimiento de salud.",
+  "price": 399.99,
+  "stock": 60,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d07d3556b679f8dbaea"
+  },
+  "name": "Cámara Canon EOS 90D",
+  "description": "Cámara réflex digital con sensor APS-C de 32.5 MP y grabación 4K.",
+  "price": 1300,
+  "stock": 40,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d0cd3556b679f8dbaee"
+  },
+  "name": "Camisa de Algodón Hombre",
+  "description": "Camisa de algodón para hombre en varios colores y tamaños.",
+  "price": 25.99,
+  "stock": 200,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d11d3556b679f8dbaf2"
+  },
+  "name": "Vestido de Noche Mujer",
+  "description": "Vestido de noche elegante con detalles de encaje y caída fluida.",
+  "price": 79.99,
+  "stock": 40,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d17d3556b679f8dbaf6"
+  },
+  "name": "Pantalones Jeans Mujer",
+  "description": "Pantalones de mezclilla de corte ajustado para mujer, disponible en diferentes colores.",
+  "price": 39.99,
+  "stock": 150,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d1ed3556b679f8dbafa"
+  },
+  "name": "Abrigo de Lana Hombre",
+  "description": "Abrigo de lana para hombre, ideal para climas fríos, en colores clásicos.",
+  "price": 99.99,
+  "stock": 30,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d24d3556b679f8dbafe"
+  },
+  "name": "Chaqueta de Cuero Mujer",
+  "description": "Chaqueta de cuero sintético para mujer, estilo moto.",
+  "price": 89.99,
+  "stock": 45,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d2cd3556b679f8dbb02"
+  },
+  "name": "Sofá Cama 2 en 1",
+  "description": "Sofá convertible en cama, ideal para espacios pequeños.",
+  "price": 499.99,
+  "stock": 20,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d34d3556b679f8dbb06"
+  },
+  "name": "Mesa de Comedor 6 Puestos",
+  "description": "Mesa de comedor de madera con capacidad para seis personas.",
+  "price": 299.99,
+  "stock": 15,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d3cd3556b679f8dbb0a"
+  },
+  "name": "Silla Ergonomica Oficina",
+  "description": "Silla ergonómica para oficina con soporte lumbar ajustable.",
+  "price": 120,
+  "stock": 60,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d43d3556b679f8dbb0e"
+  },
+  "name": "Estantería Modular",
+  "description": "Estantería modular para organización en oficina o habitación.",
+  "price": 89.99,
+  "stock": 80,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d48d3556b679f8dbb12"
+  },
+  "name": "Lámpara de Pie Moderna",
+  "description": "Lámpara de pie con diseño moderno, ideal para iluminar tu sala.",
+  "price": 55.99,
+  "stock": 100,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d51d3556b679f8dbb16"
+  },
+  "name": "Muñeca de Peluche",
+  "description": "Muñeca de peluche suave y tierna, ideal para niños.",
+  "price": 19.99,
+  "stock": 150,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d5dd3556b679f8dbb1a"
+  },
+  "name": "Bloques de Construcción",
+  "description": "Juego de bloques de construcción compatible con otras marcas populares.",
+  "price": 29.99,
+  "stock": 200,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d64d3556b679f8dbb1e"
+  },
+  "name": "Rompecabezas 1000 Piezas",
+  "description": "Rompecabezas de 1000 piezas con una imagen de paisaje.",
+  "price": 24.99,
+  "stock": 120,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d6ad3556b679f8dbb22"
+  },
+  "name": "Coche de Juguete a Control Remoto",
+  "description": "Coche de juguete eléctrico a control remoto para niños mayores de 6 años.",
+  "price": 39.99,
+  "stock": 80,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0d6fd3556b679f8dbb26"
+  },
+  "name": "Kit de Ciencia para Niños",
+  "description": "Kit de ciencia para niños que incluye experimentos divertidos.",
+  "price": 19.99,
+  "stock": 100,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0da0d3556b679f8dbb2b"
+  },
+  "name": "Cereal Integral",
+  "description": "Cereal integral saludable y bajo en azúcar.",
+  "price": 4.99,
+  "stock": 500,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0dbdd3556b679f8dbb2f"
+  },
+  "name": "Leche UHT",
+  "description": "Leche UHT de 1 litro, sin lactosa y enriquecida con vitaminas.",
+  "price": 1.89,
+  "stock": 1000,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0dcad3556b679f8dbb33"
+  },
+  "name": "Sopa Instantánea",
+  "description": "Sopa instantánea en sabores variados, lista en 3 minutos.",
+  "price": 2.49,
+  "stock": 800,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0dd1d3556b679f8dbb37"
+  },
+  "name": "Jugo de Naranja Natural",
+  "description": "Jugo de naranja natural, 100% puro sin aditivos.",
+  "price": 3.5,
+  "stock": 400,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0dd5d3556b679f8dbb3b"
+  },
+  "name": "Pan Integral",
+  "description": "Pan integral fresco, ideal para un desayuno saludable.",
+  "price": 2.99,
+  "stock": 350,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0df9d3556b679f8dbb3f"
+  },
+  "name": "Batidora de Mano",
+  "description": "Batidora de mano con velocidad ajustable y múltiples accesorios.",
+  "price": 29.99,
+  "stock": 90,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e02d3556b679f8dbb43"
+  },
+  "name": "Cafetera Automática",
+  "description": "Cafetera automática con capacidad para 12 tazas.",
+  "price": 79.99,
+  "stock": 50,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e0ad3556b679f8dbb47"
+  },
+  "name": "Tostadora 2 Rebanadas",
+  "description": "Tostadora de 2 ranuras, con función de descongelación.",
+  "price": 24.99,
+  "stock": 200,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e11d3556b679f8dbb4b"
+  },
+  "name": "Olla a Presión",
+  "description": "Olla a presión de 6 litros con sistema de seguridad.",
+  "price": 59.99,
+  "stock": 75,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e16d3556b679f8dbb4f"
+  },
+  "name": "Juego de Cuchillos",
+  "description": "Juego de cuchillos de acero inoxidable con soporte en madera.",
+  "price": 49.99,
+  "stock": 100,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e2cd3556b679f8dbb53"
+  },
+  "name": "Pelota de Fútbol",
+  "description": "Pelota de fútbol tamaño oficial, para uso en campo o entrenamiento.",
+  "price": 19.99,
+  "stock": 200,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e32d3556b679f8dbb57"
+  },
+  "name": "Raqueta de Tenis",
+  "description": "Raqueta de tenis de alta calidad con cuerda de nylon.",
+  "price": 99.99,
+  "stock": 50,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e3fd3556b679f8dbb5b"
+  },
+  "name": "Bicicleta de Montaña",
+  "description": "Bicicleta de montaña con suspensión completa y 21 velocidades.",
+  "price": 349.99,
+  "stock": 30,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e48d3556b679f8dbb5f"
+  },
+  "name": "Balón de Baloncesto",
+  "description": "Balón de baloncesto de tamaño estándar para juegos profesionales.",
+  "price": 29.99,
+  "stock": 100,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e4dd3556b679f8dbb63"
+  },
+  "name": "Kit de Yoga",
+  "description": "Kit de yoga completo, con mat, bloques y correa.",
+  "price": 45.99,
+  "stock": 75,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e63d3556b679f8dbb67"
+  },
+  "name": "Shampoo Hidratante",
+  "description": "Shampoo hidratante para cabello seco, enriquecido con aceites naturales.",
+  "price": 5.99,
+  "stock": 500,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e6ad3556b679f8dbb6b"
+  },
+  "name": "Crema Facial Antiarrugas",
+  "description": "Crema facial con efecto antiarrugas, ideal para pieles maduras.",
+  "price": 22.99,
+  "stock": 120,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e70d3556b679f8dbb6f"
+  },
+  "name": "Perfume Hugo Boss",
+  "description": "Perfume de alta gama para hombre con notas frescas y amaderadas.",
+  "price": 59.99,
+  "stock": 80,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e76d3556b679f8dbb73"
+  },
+  "name": "Gel Antibacterial",
+  "description": "Gel antibacterial con 70% de alcohol, para una limpieza profunda de manos.",
+  "price": 2.99,
+  "stock": 1000,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb0e79d3556b679f8dbb77"
+  },
+  "name": "Kit de Maquillaje",
+  "description": "Kit de maquillaje con varios tonos de sombras, rubores y labiales.",
+  "price": 39.99,
+  "stock": 150,
+  "sales": 0,
+  "category": {
+    "$oid": "67caf6324132a41013f9c65a"
   },
   "__v": 0
 }]
