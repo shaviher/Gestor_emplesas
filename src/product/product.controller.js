@@ -3,7 +3,7 @@ import Category from "../category/category.model.js";
 
 export const createProduct = async (req, res) => {
     try {
-        const { name, description, price, stock, categoryId } = req.body
+        const { name, description, price, stock, cid } = req.body
 
         if (!name || !price) {
             return res.status(400).json({
@@ -14,8 +14,8 @@ export const createProduct = async (req, res) => {
 
         let category = null;
 
-        if (categoryId) {
-            category = await Category.findById(categoryId);
+        if (cid) {
+            category = await Category.findById(cid);
             if (!category) {
                 return res.status(404).json({
                     success: false,
@@ -68,12 +68,12 @@ export const createProduct = async (req, res) => {
 export const updateProduct = async (req, res) => {
     try {
         const { pid } = req.params
-        const { name, description, price, stock, categoryId } = req.body
+        const { name, description, price, stock, cid } = req.body
 
         let updatedData = { name, description, price, stock }
 
-        if (categoryId) {
-            const category = await Category.findById(categoryId)
+        if (cid) {
+            const category = await Category.findById(cid)
             if (!category) {
                 return res.status(404).json({
                     success: false,
@@ -109,15 +109,15 @@ export const updateProduct = async (req, res) => {
 
 export const exploreProducts = async (req, res) => {
     try {
-        const { filter, search, categoryId } = req.query
+        const { filter, search, cid } = req.query
         let query = {}
       
         if (search) {
             query.name = { $regex: search, $options: "i" }
         }
         
-        if (categoryId) {
-            query.category = categoryId
+        if (cid) {
+            query.category = cid
         }
 
         let products

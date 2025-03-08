@@ -13,6 +13,7 @@ import categoryRoutes from "../src/category/category.routes.js"
 import productRoutes from "../src/product/product.routes.js"
 import cartRoutes from "../src/cart/cart.routes.js"
 import invoiceRoutes from "../src/Invoice/invoice.routes.js"
+import { swaggerDocs, swaggerUi } from "./swagger.js"
 
 const middlewares = (app) => {
     app.use(express.json())
@@ -27,9 +28,8 @@ const routes = (app) => {
     app.use("/GestorTienda/v1/category", categoryRoutes)
     app.use("/GestorTienda/v1/product", productRoutes)
     app.use("/GestorTienda/v1/cart", cartRoutes)
-    app.use("/GestorTienda/v1/invouce", invoiceRoutes)
-
-
+    app.use("/GestorTienda/v1/invoice", invoiceRoutes)
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 
 const conectarDB = async () =>{
