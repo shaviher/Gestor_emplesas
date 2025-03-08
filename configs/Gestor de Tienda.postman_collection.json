@@ -7,587 +7,900 @@
 	},
 	"item": [
 		{
-			"name": "AUTH/USER",
+			"name": "CLIENT",
 			"item": [
 				{
-					"name": "http://localhost:3001/GestorTienda/v1/auth/login",
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"becheverria@gmail.com\",\r\n    \"password\": \"admin123\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+					"name": "PERFIL",
+					"item": [
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/auth/login Copy",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"javier.hernandez@example.com\",\r\n    \"password\": \"javier12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"auth",
+										"login"
+									]
 								}
-							}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://localhost:3001/COPEREX/v1/user/login",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"COPEREX",
-								"v1",
-								"user",
-								"login"
-							]
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/user/updateUser/67c7fad6dd7b2022029d7e0b",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjU4NzhhMTlmNWY2N2IxOTlmY2YiLCJpYXQiOjE3NDExNjQ4MTQsImV4cCI6MTc0MTE2ODQxNH0.Cy0HY51hp8hywoyXgEF9XiqlIHjnC9yFoJsqwKAjgwI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rol\": \"ADMIN\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/user/updateUser/67c7fcb373825cb7cdc4da8d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"user",
+										"updateUser",
+										"67c7fcb373825cb7cdc4da8d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/user/deleteUser/67c7f5ad8a19f5f67b199fd4 Copy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjVhZDhhMTlmNWY2N2IxOTlmZDQiLCJpYXQiOjE3NDEyNDA4MzcsImV4cCI6MTc0MTI0NDQzN30.Wn6cyXKB75luB-uGjhTWliElwQ5MNXBvcOEP413H1lE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"juanperez\",\r\n    \"email\": \"juan.perez@example.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/user/deleteUser/67c7f5ad8a19f5f67b199fd4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"user",
+										"deleteUser",
+										"67c7f5ad8a19f5f67b199fd4"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "http://localhost:3001/GestorTienda/v1/auth/register",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjU4NzhhMTlmNWY2N2IxOTlmY2YiLCJpYXQiOjE3NDExNTc3ODUsImV4cCI6MTc0MTE2MTM4NX0.bChf1MT9jHN-dDIrH25LAssW9qarDOn1iLb7AMaGh3w",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Luis\",\r\n    \"lastname\": \"García\",\r\n    \"username\": \"luisgarcia\",\r\n    \"email\": \"luis.garcia@example.com\",\r\n    \"password\": \"luis12345\",\r\n    \"phone\": \"98765432\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
+					"name": "VER PRODUCTOS",
+					"item": [
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/product/exploreProducts?filter=bestsellers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/product/exploreProducts?filter=bestsellers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"product",
+										"exploreProducts"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "bestsellers"
+										}
+									]
 								}
-							}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://localhost:3001/GestorTienda/v1/auth/register",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"GestorTienda",
-								"v1",
-								"auth",
-								"register"
-							]
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/product/exploreProducts?search=Laptop",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/product/exploreProducts?categoryId=67cb0bfcd3556b679f8dbab1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/product/exploreProducts?categoryId=67cc88a2e5397ee8bac420c6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"product",
+										"exploreProducts"
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "67cc88a2e5397ee8bac420c6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/product/searchProduct/67cc9b9d0be3cb2bd575a70a",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/product/searchProduct/67cc9b9d0be3cb2bd575a70a",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/product/searchProduct/67cc9bac0be3cb2bd575a712",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"product",
+										"searchProduct",
+										"67cc9bac0be3cb2bd575a712"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "http://localhost:3001/GestorTienda/v1/user/updateUser/67c7fad6dd7b2022029d7e0b",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjU4NzhhMTlmNWY2N2IxOTlmY2YiLCJpYXQiOjE3NDExNjQ4MTQsImV4cCI6MTc0MTE2ODQxNH0.Cy0HY51hp8hywoyXgEF9XiqlIHjnC9yFoJsqwKAjgwI",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"rol\": \"ADMIN\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
+					"name": "CARRITO DE COMPRAS",
+					"item": [
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/cart/cartAdd",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMWNiMjJhNTBmNjU3NWFmMWUwZDkiLCJpYXQiOjE3NDEzNjQ0NDAsImV4cCI6MTc0MTM2ODA0MH0.CiwADImInY83GJJAE8LwaasDrXwkL06HspI3NfZhmWE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pid\": \"67cb0d01d3556b679f8dbae6\",  // ID del producto a agregar\r\n    \"quantity\": 2  // Cantidad del producto que deseas agregar al carrito\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/cart/cartAdd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"cart",
+										"cartAdd"
+									]
 								}
-							}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://localhost:3001/GestorTienda/v1/user/updateUser/67c7fcb373825cb7cdc4da8d",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"GestorTienda",
-								"v1",
-								"user",
-								"updateUser",
-								"67c7fcb373825cb7cdc4da8d"
-							]
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/cart/cartAdd Copy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMWNiMjJhNTBmNjU3NWFmMWUwZDkiLCJpYXQiOjE3NDEzNjQ0NDAsImV4cCI6MTc0MTM2ODA0MH0.CiwADImInY83GJJAE8LwaasDrXwkL06HspI3NfZhmWE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pid\": \"67cb0d01d3556b679f8dbae6\",  // ID del producto a agregar\r\n    \"quantity\": 2  // Cantidad del producto que deseas agregar al carrito\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/cart/cartAdd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"cart",
+										"cartAdd"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "http://localhost:3001/GestorTienda/v1/user/deleteUser/67c7f5ad8a19f5f67b199fd4",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjVhZDhhMTlmNWY2N2IxOTlmZDQiLCJpYXQiOjE3NDEyNDA4MzcsImV4cCI6MTc0MTI0NDQzN30.Wn6cyXKB75luB-uGjhTWliElwQ5MNXBvcOEP413H1lE",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"username\" : \"juanperez\",\r\n    \"email\": \"juan.perez@example.com\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+					"name": "MIS FACTURAS",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMWNiMjJhNTBmNjU3NWFmMWUwZDkiLCJpYXQiOjE3NDEzNjQ0NDAsImV4cCI6MTc0MTM2ODA0MH0.CiwADImInY83GJJAE8LwaasDrXwkL06HspI3NfZhmWE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/invoice/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"invoice",
+										"create"
+									]
 								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3001/GestorTienda/v1/user/deleteUser/67c7f5ad8a19f5f67b199fd4",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"GestorTienda",
-								"v1",
-								"user",
-								"deleteUser",
-								"67c7f5ad8a19f5f67b199fd4"
-							]
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				}
 			]
 		},
 		{
-			"name": "Category",
+			"name": "ADMIN",
 			"item": [
 				{
-					"name": "http://localhost:3001/GestorTienda/v1/category/createCategory",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjU4NzhhMTlmNWY2N2IxOTlmY2YiLCJpYXQiOjE3NDEyNDU3MDgsImV4cCI6MTc0MTI0OTMwOH0.Qu6TfGq5hwQ6EDIGjnKgScLh_rLQqARyc7RkBUK4tt4",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"asdasd\",\r\n    \"description\": \"asdasdas the cleans\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+					"name": "ADMINISTRAR USUARIOS",
+					"item": [
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/auth/register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjU4NzhhMTlmNWY2N2IxOTlmY2YiLCJpYXQiOjE3NDExNTc3ODUsImV4cCI6MTc0MTE2MTM4NX0.bChf1MT9jHN-dDIrH25LAssW9qarDOn1iLb7AMaGh3w",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Luis\",\r\n    \"lastname\": \"García\",\r\n    \"username\": \"luisgarcia\",\r\n    \"email\": \"luis.garcia@example.com\",\r\n    \"password\": \"luis12345\",\r\n    \"phone\": \"98765432\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"auth",
+										"register"
+									]
 								}
-							}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://localhost:3001/GestorTienda/v1/category/createCategory",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"GestorTienda",
-								"v1",
-								"category",
-								"createCategory"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:3001/GestorTienda/v1/category/getCategories",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjU4NzhhMTlmNWY2N2IxOTlmY2YiLCJpYXQiOjE3NDEyNDU3MDgsImV4cCI6MTc0MTI0OTMwOH0.Qu6TfGq5hwQ6EDIGjnKgScLh_rLQqARyc7RkBUK4tt4",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "http://localhost:3001/GestorTienda/v1/category/getCategories",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"GestorTienda",
-								"v1",
-								"category",
-								"getCategories"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:3001/GestorTienda/v1/category/updateCategory/67c94df430fbec6189d81ce3",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjU4NzhhMTlmNWY2N2IxOTlmY2YiLCJpYXQiOjE3NDEyNDU3MDgsImV4cCI6MTc0MTI0OTMwOH0.Qu6TfGq5hwQ6EDIGjnKgScLh_rLQqARyc7RkBUK4tt4",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"tamales\",\r\n    \"description\": \"no lo se ricjk\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/auth/login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"becheverria@gmail.com\",\r\n    \"password\": \"admin123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/COPEREX/v1/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"COPEREX",
+										"v1",
+										"user",
+										"login"
+									]
 								}
-							}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://localhost:3001/GestorTienda/v1/category/updateCategory/67c94df430fbec6189d81ce3",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"GestorTienda",
-								"v1",
-								"category",
-								"updateCategory",
-								"67c94df430fbec6189d81ce3"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:3001/GestorTienda/v1/category/deleteCategory/67caf88a4132a41013f9c672",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjYzMjQxMzJhNDEwMTNmOWM2NWMiLCJpYXQiOjE3NDEzNTQ4NjksImV4cCI6MTc0MTM1ODQ2OX0.1QgDczBrbFoUOllumDUJ5cEq8AvEGujYtW1slmcNLPI",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/user/updateUser/67c7fad6dd7b2022029d7e0b Copy",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjU4NzhhMTlmNWY2N2IxOTlmY2YiLCJpYXQiOjE3NDExNjQ4MTQsImV4cCI6MTc0MTE2ODQxNH0.Cy0HY51hp8hywoyXgEF9XiqlIHjnC9yFoJsqwKAjgwI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rol\": \"ADMIN\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/user/updateUser/67c7fcb373825cb7cdc4da8d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"user",
+										"updateUser",
+										"67c7fcb373825cb7cdc4da8d"
+									]
 								}
-							}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://localhost:3001/GestorTienda/v1/category/deleteCategory/67caf88a4132a41013f9c672",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"GestorTienda",
-								"v1",
-								"category",
-								"deleteCategory",
-								"67caf88a4132a41013f9c672"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Product",
-			"item": [
-				{
-					"name": "http://localhost:3001/GestorTienda/v1/product/createProduct",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjU4NzhhMTlmNWY2N2IxOTlmY2YiLCJpYXQiOjE3NDEzMjU0NDcsImV4cCI6MTc0MTMyOTA0N30.fWDAlv3IluQBrXJc8Q8MdDXFfIz_41sYK4kkh8ayzvU",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Laptop Gamer\",\r\n    \"price\": 1200,\r\n    \"category\": \"tamales\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/user/deleteUser/67c7f5ad8a19f5f67b199fd4",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjVhZDhhMTlmNWY2N2IxOTlmZDQiLCJpYXQiOjE3NDEyNDA4MzcsImV4cCI6MTc0MTI0NDQzN30.Wn6cyXKB75luB-uGjhTWliElwQ5MNXBvcOEP413H1lE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"juanperez\",\r\n    \"email\": \"juan.perez@example.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/user/deleteUser/67c7f5ad8a19f5f67b199fd4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"user",
+										"deleteUser",
+										"67c7f5ad8a19f5f67b199fd4"
+									]
 								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3001/GestorTienda/v1/product/createProduct",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"GestorTienda",
-								"v1",
-								"product",
-								"createProduct"
-							]
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "http://localhost:3001/GestorTienda/v1/product/updateProduct/67caf79d4132a41013f9c667",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjYzMjQxMzJhNDEwMTNmOWM2NWMiLCJpYXQiOjE3NDEzNTQ4NjksImV4cCI6MTc0MTM1ODQ2OX0.1QgDczBrbFoUOllumDUJ5cEq8AvEGujYtW1slmcNLPI",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"description\": \"nose 0.2\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+					"name": "ADMINISTRAR CATEGORIAS",
+					"item": [
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/category/createCategory",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjU4NzhhMTlmNWY2N2IxOTlmY2YiLCJpYXQiOjE3NDEyNDU3MDgsImV4cCI6MTc0MTI0OTMwOH0.Qu6TfGq5hwQ6EDIGjnKgScLh_rLQqARyc7RkBUK4tt4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"asdasd\",\r\n    \"description\": \"asdasdas the cleans\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/category/createCategory",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"category",
+										"createCategory"
+									]
 								}
-							}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://localhost:3001/GestorTienda/v1/product/updateProduct/67caf79d4132a41013f9c667",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"GestorTienda",
-								"v1",
-								"product",
-								"updateProduct",
-								"67caf79d4132a41013f9c667"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "New Request",
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "New Request Copy",
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "New Request Copy 2",
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "New Request Copy 3",
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "New Request Copy 4",
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "New Request Copy 5",
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:3001/GestorTienda/v1/product/deleteProduct/67caf7c54132a41013f9c66b",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjYzMjQxMzJhNDEwMTNmOWM2NWMiLCJpYXQiOjE3NDEzNTQ4NjksImV4cCI6MTc0MTM1ODQ2OX0.1QgDczBrbFoUOllumDUJ5cEq8AvEGujYtW1slmcNLPI",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/category/getCategories",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjU4NzhhMTlmNWY2N2IxOTlmY2YiLCJpYXQiOjE3NDEyNDU3MDgsImV4cCI6MTc0MTI0OTMwOH0.Qu6TfGq5hwQ6EDIGjnKgScLh_rLQqARyc7RkBUK4tt4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/category/getCategories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"category",
+										"getCategories"
+									]
 								}
-							}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://localhost:3001/GestorTienda/v1/product/deleteProduct/67caf7c54132a41013f9c66b",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"GestorTienda",
-								"v1",
-								"product",
-								"deleteProduct",
-								"67caf7c54132a41013f9c66b"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Cart",
-			"item": [
-				{
-					"name": "http://localhost:3001/GestorTienda/v1/cart/cartAdd",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMWNiMjJhNTBmNjU3NWFmMWUwZDkiLCJpYXQiOjE3NDEzNjQ0NDAsImV4cCI6MTc0MTM2ODA0MH0.CiwADImInY83GJJAE8LwaasDrXwkL06HspI3NfZhmWE",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"pid\": \"67cb0d01d3556b679f8dbae6\",  // ID del producto a agregar\r\n    \"quantity\": 2  // Cantidad del producto que deseas agregar al carrito\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/category/updateCategory/67c94df430fbec6189d81ce3",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjU4NzhhMTlmNWY2N2IxOTlmY2YiLCJpYXQiOjE3NDEyNDU3MDgsImV4cCI6MTc0MTI0OTMwOH0.Qu6TfGq5hwQ6EDIGjnKgScLh_rLQqARyc7RkBUK4tt4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"tamales\",\r\n    \"description\": \"no lo se ricjk\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/category/updateCategory/67c94df430fbec6189d81ce3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"category",
+										"updateCategory",
+										"67c94df430fbec6189d81ce3"
+									]
 								}
-							}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://localhost:3001/GestorTienda/v1/cart/cartAdd",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"GestorTienda",
-								"v1",
-								"cart",
-								"cartAdd"
-							]
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/category/deleteCategory/67caf88a4132a41013f9c672",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjYzMjQxMzJhNDEwMTNmOWM2NWMiLCJpYXQiOjE3NDEzNTQ4NjksImV4cCI6MTc0MTM1ODQ2OX0.1QgDczBrbFoUOllumDUJ5cEq8AvEGujYtW1slmcNLPI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/category/deleteCategory/67caf88a4132a41013f9c672",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"category",
+										"deleteCategory",
+										"67caf88a4132a41013f9c672"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "http://localhost:3001/GestorTienda/v1/cart/cartAdd Copy",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMWNiMjJhNTBmNjU3NWFmMWUwZDkiLCJpYXQiOjE3NDEzNjQ0NDAsImV4cCI6MTc0MTM2ODA0MH0.CiwADImInY83GJJAE8LwaasDrXwkL06HspI3NfZhmWE",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"pid\": \"67cb0d01d3556b679f8dbae6\",  // ID del producto a agregar\r\n    \"quantity\": 2  // Cantidad del producto que deseas agregar al carrito\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
+					"name": "ADMINISTRAR PRODUCTOS",
+					"item": [
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/product/createProduct",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjU4NzhhMTlmNWY2N2IxOTlmY2YiLCJpYXQiOjE3NDEzMjU0NDcsImV4cCI6MTc0MTMyOTA0N30.fWDAlv3IluQBrXJc8Q8MdDXFfIz_41sYK4kkh8ayzvU",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Laptop Gamer\",\r\n    \"price\": 1200,\r\n    \"category\": \"tamales\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/product/createProduct",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"product",
+										"createProduct"
+									]
 								}
-							}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://localhost:3001/GestorTienda/v1/cart/cartAdd",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"GestorTienda",
-								"v1",
-								"cart",
-								"cartAdd"
-							]
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/product/updateProduct/67caf79d4132a41013f9c667",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjYzMjQxMzJhNDEwMTNmOWM2NWMiLCJpYXQiOjE3NDEzNTQ4NjksImV4cCI6MTc0MTM1ODQ2OX0.1QgDczBrbFoUOllumDUJ5cEq8AvEGujYtW1slmcNLPI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"nose 0.2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/product/updateProduct/67caf79d4132a41013f9c667",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"product",
+										"updateProduct",
+										"67caf79d4132a41013f9c667"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request Copy",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "New Request Copy 2",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "New Request Copy 3",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "New Request Copy 4",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "New Request Copy 5",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/product/deleteProduct/67caf7c54132a41013f9c66b",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjYzMjQxMzJhNDEwMTNmOWM2NWMiLCJpYXQiOjE3NDEzNTQ4NjksImV4cCI6MTc0MTM1ODQ2OX0.1QgDczBrbFoUOllumDUJ5cEq8AvEGujYtW1slmcNLPI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/product/deleteProduct/67caf7c54132a41013f9c66b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"product",
+										"deleteProduct",
+										"67caf7c54132a41013f9c66b"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Invoice",
-			"item": [
+					]
+				},
 				{
-					"name": "New Request",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMWNiMjJhNTBmNjU3NWFmMWUwZDkiLCJpYXQiOjE3NDEzNjQ0NDAsImV4cCI6MTc0MTM2ODA0MH0.CiwADImInY83GJJAE8LwaasDrXwkL06HspI3NfZhmWE",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
+					"name": "ADMINISTRAR CARRITO",
+					"item": [
+						{
+							"name": "http://localhost:3001/GestorTienda/v1/cart/cartAdd Copy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMWNiMjJhNTBmNjU3NWFmMWUwZDkiLCJpYXQiOjE3NDEzNjQ0NDAsImV4cCI6MTc0MTM2ODA0MH0.CiwADImInY83GJJAE8LwaasDrXwkL06HspI3NfZhmWE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pid\": \"67cb0d01d3556b679f8dbae6\",  // ID del producto a agregar\r\n    \"quantity\": 2  // Cantidad del producto que deseas agregar al carrito\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/cart/cartAdd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"cart",
+										"cartAdd"
+									]
 								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3001/GestorTienda/v1/invoice/create",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"GestorTienda",
-								"v1",
-								"invoice",
-								"create"
-							]
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
+				},
+				{
+					"name": "ADMINISTRAR FACTURAS",
+					"item": [
+						{
+							"name": "New Request Copy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMWNiMjJhNTBmNjU3NWFmMWUwZDkiLCJpYXQiOjE3NDEzNjQ0NDAsImV4cCI6MTc0MTM2ODA0MH0.CiwADImInY83GJJAE8LwaasDrXwkL06HspI3NfZhmWE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/GestorTienda/v1/invoice/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"GestorTienda",
+										"v1",
+										"invoice",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
